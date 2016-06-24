@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622230828) do
+ActiveRecord::Schema.define(version: 20160624234042) do
 
   create_table "rooms", force: :cascade do |t|
     t.string   "home_type"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160622230828) do
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.boolean  "is_internet"
   end
 
   add_index "rooms", ["user_id"], name: "index_rooms_on_user_id"
