@@ -1,6 +1,7 @@
 == README
 
-CXN: This is an Airbnb Clone App created using Ruby on Rails,
-Bootstrap, jQuery and Paypal
+Vacation Rentals is an online marketplace that enables people to list, find, and rent vacation homes.
+
+This is App was created using Ruby on Rails, Bootstrap, jQuery and Paypal.
 
 
