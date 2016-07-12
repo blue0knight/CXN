@@ -1,5 +1,6 @@
 <div class="panel panel-default">
 	<div class="panel-body">
+
 		<!-- Image -->
 		<div class="row">
 			<div class="col-md-12">
@@ -17,9 +18,11 @@
 						<%= image_tag avatar_url(@room.user), class: "img-circle avatar-large" %><br><br>
 						<%= @room.user.fullname %>
 					</div>
+
 					<div class="col-md-9">
 						<h4><%= @room.listing_name %></h4>
 						<%= @room.address %>
+
 						<div class="row text-center row-space-1">
 							<div class="col-sm-3">
 								<i class="fa fa-home fa-2x"></i>
@@ -49,15 +52,14 @@
 								<%= pluralize @room.bath_room, "Bathroom" %>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
 
 			<div class="col-md-4">
 				<!-- Reservation form -->
-				<% if !current_user.rooms.include?(@room) %>
 					<%= render 'reservations/form' %>
-				<% end %>
 			</div>
 		</div>
 
@@ -84,10 +86,8 @@
 						</ul>
 					</div>
 					<div class="col-md-6">
-						<ul class="amenities">
 							<li class="<%= 'text-line-through' if !@room.is_heating %>">Heating</li>
 							<li class="<%= 'text-line-through' if !@room.is_air %>">Air Conditioning</li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -97,6 +97,7 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
 				  <!-- Indicators -->
 				  <% if @photos %>
 					  <ol class="carousel-indicators">
@@ -106,7 +107,6 @@
 					  </ol>
 				  <% end %>
 
-				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
 				    <% if @photos %>
 						<% @photos.each do |photo| %>
@@ -189,11 +189,11 @@
     <h2>Nearby Rooms</h2>
 		<div class="row">
 			<% for room in @room.nearbys(10) %>
+
 				<div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-heading preview">
               <%= image_tag room.photos[0].image.url(:medium) %>
-							<!-- <%= image_tag room.show_first_photo(:medium) %> -->
 						</div>
 						<div class="panel-body">
 							<%= link_to room.listing_name, room_path(room) %><br>
@@ -201,6 +201,7 @@
 						</div>
 					</div>
 				</div>
+
 			<% end %>
 		</div>
 
