@@ -20,7 +20,6 @@ class ReservationsController < ApplicationController
 		render json: output
 	end
 
-
 	def create
 		@reservation = current_user.reservations.create(reservation_params)
 
