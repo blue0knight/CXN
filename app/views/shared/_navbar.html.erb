@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Vacation Rentals</a>
+      <a class="navbar-brand" href="#">AirAlien</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -18,15 +18,16 @@
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% else %>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">
-            <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
-            <%= current_user.fullname %><span class="caret"></span>
-          </a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
+              <%= current_user.fullname %> <span class="caret"></span>
+            </a>
 
             <ul class="dropdown-menu">
-              <li><a href="#">Your Trips</a></li>
-              <li><a href="#">Wish List</a></li>
+              <li><%= link_to "Your Listings", rooms_path %></li>
+              <li><%= link_to "Your Reservations", your_reservations_path %></li>
+              <li><%= link_to "Your Trips", your_trips_path %></li>
+              <li><a href="#">Wish Lists</a></li>
               <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
               <li role="separator" class="divider"></li>
               <li><a href="#">Account Setting</a></li>
@@ -41,7 +42,6 @@
         <li>
           <a href="#"><i class="fa fa-home fa-lg"></i> Become a Host</a>
         </li>
-
 
 
       </ul>
