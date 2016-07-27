@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @rooms = Room.all
+    @rooms = Room.limit(3)
   end
 
   def search
@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   	if params[:search].present? && params[:search].strip != ""
   		session[:loc_search] = params[:search]
     end
-    
+
   	arrResult = Array.new
 
   	if session[:loc_search] && session[:loc_search] != ""
