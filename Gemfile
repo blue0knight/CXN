@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.6'
-gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
@@ -31,7 +30,13 @@ gem 'thin'
 gem 'ransack'
 
 group :development, :test do
+  gem 'sqlite3'
+end
+
+group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'pg'
+  gem 'rails_12factor'
 end
