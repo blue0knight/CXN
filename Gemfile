@@ -7,27 +7,19 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
-
 gem 'devise'
-
 gem 'toastr-rails'
-
 gem 'omniauth'
 gem 'omniauth-facebook'
-
-gem 'paperclip'
-
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 gem 'geocoder'
-
 gem 'jquery-ui-rails'
-
 gem 'private_pub'
 gem 'thin'
-
 gem 'ransack'
+gem 'aws-sdk', '~> 2.4', '>= 2.4.3'
 
 group :development, :test do
   gem 'sqlite3'
