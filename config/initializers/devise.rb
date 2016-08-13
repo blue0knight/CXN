@@ -266,6 +266,9 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  # config.omniauth :facebook, '1136416489755734', 'c9186d87b5e617993bcf94125f499e88', scope: 'email', info_fields: 'email, name'
-  config.omniauth :facebook, '1178983542143714', '0191511bd5e5f360f6c596a04ab1e8d8', scope: 'email', info_fields: 'email, name'
+  #fb oauth credentials for heroku live
+  config.omniauth :facebook, '1136416489755734', 'c9186d87b5e617993bcf94125f499e88', scope: 'email', info_fields: 'email, name'
+
+  #fb credentials for localhost
+  # config.omniauth :facebook, '1178983542143714', '0191511bd5e5f360f6c596a04ab1e8d8', scope: 'email', info_fields: 'email, name'
 end
