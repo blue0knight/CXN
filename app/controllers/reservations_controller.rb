@@ -29,12 +29,12 @@ class ReservationsController < ApplicationController
 				business: 'oni_rivera98-facilitator@yahoo.com',
 				cmd: '_xclick',
 				upload: 1,
-				notify_url: '/notify',
+				notify_url: 'https://obscure-thicket-94949.herokuapp.com/notify',
 				amount: @reservation.total,
 				item_name: @reservation.room.listing_name,
 				item_number: @reservation.id,
 				quantity: '1',
-				return: '/your_trips'
+				return: 'https://obscure-thicket-94949.herokuapp.com/your_trips'
 			}
 
 			redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
