@@ -29,12 +29,12 @@ class ReservationsController < ApplicationController
 				business: 'oni_rivera98-facilitator@yahoo.com',
 				cmd: '_xclick',
 				upload: 1,
-				notify_url: 'http://8fb6a036.ngrok.io/notify',
+				notify_url: '/notify',
 				amount: @reservation.total,
 				item_name: @reservation.room.listing_name,
 				item_number: @reservation.id,
 				quantity: '1',
-				return: 'http://8fb6a036.ngrok.io/your_trips'
+				return: '/your_trips'
 			}
 
 			redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
