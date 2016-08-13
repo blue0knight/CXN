@@ -1,7 +1,19 @@
 == README
 
-Vacation Rentals is an online marketplace that enables people to list, find, and rent vacation homes.
+Vacation Rentals is an online marketplace that enables users to list,
+find, and rent vacation homes.
 
-This is App was created using Ruby on Rails, Bootstrap, jQuery and Paypal.
+- Users can Login using their Facebook account or Register by using their email
+- User can create profiles that can be edited along with photo upload capability,
+  and can review booked rooms
+- Users can send private messages to other users using Private Messaging System
+- Users can make reservation, book and pay using PayPal
 
+Features and technologies:
 
+- Pages and NavBar created using Bootstrap
+- Basic Authentication & Facebook Authentication using omniauth
+- Photos using Paperclip and Amazon aws-sdk
+- Paypal to handle payment processing
+- Google maps api and geocoder gem for google maps
+- Ajax making application load faster and to check conflicting dates
